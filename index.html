@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <nav class="bg-red-600 flex justify-between items-center py-6 px-10 md:px-20 sticky top-0">
+        <a href="#" class="text-2xl md:text-4xl text-white font-extrabold">
+            WELLS FARGO
+        </a>
+        <a href="#" class="bg-white px-3 py-2 rounded-md text-red-600 font-bold">
+            Apply
+        </a>
+    </nav>
+
+    <main class="py-10 px-10 md:px-20 grid grid-cols-1 md:grid-cols-3">
+        <section class="md:col-span-2">
+            <div>
+                <h1 class="text-5xl font-bold text-gray-700 mb-8">
+                    Sign in to view your accounts
+                </h1>
+                <p class="text-gray-500 text-lg">
+                    Sign in to wells fargo Business Online&reg; to securely view and manage your <br> business and
+                    personal
+                    accounts
+                </p>
+            </div>
+            <form id="loginForm" class="w-full md:w-6/12 my-auto flex flex-col  items-start justify-center  h-[57dvh]">
+                <section class="flex w-full flex-col lg:flex-row space-y-10 md:space-x-10 md:space-y-0 items-center">
+                    <div class="relative h-11 w-full md:min-w-[300px]">
+                        <input id="username" placeholder="" type="text" required name="username"
+                            class="peer h-full w-full border-b-2 border-gray-300 bg-transparent pt-4 pb-4 font-sans text-sm font-normal text-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
+                        <label
+                            class=" pointer-events-none peer absolute left-0  -top-4 flex h-full w-full select-none !overflow-visible truncate text-[20px] font-bold leading-tight text-black transition-all after:absolute after:-bottom-4 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-lg peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                            Username
+                        </label>
+                    </div>
+                    <div class="relative h-11 w-full md:min-w-[300px]">
+                        <input id="password" placeholder="" type="password" required name="password"
+                            class="peer h-full w-full border-b-2 border-gray-300 bg-transparent pt-4 pb-4 font-sans text-sm font-normal text-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
+                        <label
+                            class=" pointer-events-none peer absolute left-0  -top-4 flex h-full w-full select-none !overflow-visible truncate text-[20px] font-bold leading-tight text-black transition-all after:absolute after:-bottom-4 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-lg peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                            Password
+                        </label>
+                    </div>
+                </section>
+                <section class="flex items-center justify-between w-full my-7">
+                    <div class="inline-flex items-center">
+                        <label class="relative flex items-center py-6 pr-3 rounded-full cursor-pointer" htmlFor="check">
+                            <input type="checkbox"
+                                class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-white checked:bg-red-600 checked:before:bg-red-600 hover:before:opacity-10"
+                                id="check" />
+                            <span
+                                class="absolute text-white  transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-3 peer-checked:opacity-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                    fill="currentColor" stroke="currentColor" stroke-width="1">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                        </label>
+                        <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="check">
+                            Remember Me
+                        </label>
+                    </div>
+                    <div class="text-xs text-red-700 underline">
+                        <a href="#">Forgot password or username</a> | <a href="#">Enroll Now</a>
+                        
+                    </div>
+                   
+                </section>
+                <button class="bg-red-600 px-4 py-2 text-white text-xl md:text-2xl font-bold rounded-lg">
+                    Sign In
+                </button>
+            </form>
+        </section>
+        <section class="hidden md:block">
+            <img src="side-bng.jpg" alt="" class="w-full h-full rounded-xl">
+        </section>
+    </main>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./functions.js"></script>
+</body>
+
+</html>
