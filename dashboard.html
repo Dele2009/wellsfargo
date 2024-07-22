@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,43 +10,51 @@
         body {
             font-family: 'Arial', sans-serif;
         }
-       
+
         /* .account-card .icon {
             color: #b91c1c;
         } */
         .account-balance {
             color: #dc2626;
         }
+        .logo-name{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        } 
     </style>
 </head>
+
 <body class="bg-gray-100 text-gray-800 overflow-x-hidden">
 
     <!-- Header -->
     <header class="bg-red-600 text-white p-4 flex items-center justify-between">
-        <h1 class="text-2xl md:text-3xl font-extrabold">WELLS FARGO</h1>
+        <a href="#" class="logo-name flex items-center text-xl md:text-4xl text-white font-extrabold">
+            <img src="wp-logo.jpeg" class="size-14 md:size-12 rounded-sm mx-2" alt="">
+            <span class="hidden md:inline">WELLS FARGO</span>
+        </a>
         <div class="space-x-6 flex items-center">
             <i class="fa fa-car text-3xl hidden md:inline"></i>
             <i class="fa fa-lock text-3xl hidden md:inline"></i>
-            <i class="fa fa-bars text-3xl md:hidden select-none" data-ripple-light="true" data-popover-target="menu"></i>
+            <i class="fa fa-bars text-3xl md:hidden select-none" data-ripple-light="true"
+                data-popover-target="menu"></i>
             <!-- <button 
     class="select-none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
     Open Menu
   </button> -->
-  <ul role="menu" data-popover="menu" data-popover-placement="bottom"
-    class="absolute md:hidden z-50 min-w-[180px] flex items-center overflow-auto rounded-md border border-gray-50 bg-white p-3 font-sans text-sm font-normal text-gray-500 shadow-lg shadow-gray-500/10 focus:outline-none">
-    <li role="menuitem"
-      class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-center leading-tight transition-all hover:bg-gray-50 hover:bg-opacity-80 hover:text-red-700 focus:bg-gray-50 focus:bg-opacity-80 focus:text-red-700 active:bg-gray-50 active:bg-opacity-80 active:text-red-700">
-      <i class="fa fa-car text-3xl inline md:hidden"></i>
-    </li>
-    <li role="menuitem"
-      class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-center leading-tight transition-all hover:bg-gray-50 hover:bg-opacity-80 hover:text-red-700 focus:bg-gray-50 focus:bg-opacity-80 focus:text-red-700 active:bg-gray-50 active:bg-opacity-80 active:text-red-700">
-      <i class="fa fa-lock text-3xl inline md:hidden"></i>
-    </li>
-    <!-- <li role="menuitem"
+            <ul role="menu" data-popover="menu" data-popover-placement="bottom"
+                class="absolute md:hidden z-50 min-w-[180px] flex items-center overflow-auto rounded-md border border-gray-50 bg-white p-3 font-sans text-sm font-normal text-gray-500 shadow-lg shadow-gray-500/10 focus:outline-none">
+                <li role="menuitem"
+                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-center leading-tight transition-all hover:bg-gray-50 hover:bg-opacity-80 hover:text-red-700 focus:bg-gray-50 focus:bg-opacity-80 focus:text-red-700 active:bg-gray-50 active:bg-opacity-80 active:text-red-700">
+                    <i class="fa fa-car text-3xl inline md:hidden"></i>
+                </li>
+                <li role="menuitem"
+                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-center leading-tight transition-all hover:bg-gray-50 hover:bg-opacity-80 hover:text-red-700 focus:bg-gray-50 focus:bg-opacity-80 focus:text-red-700 active:bg-gray-50 active:bg-opacity-80 active:text-red-700">
+                    <i class="fa fa-lock text-3xl inline md:hidden"></i>
+                </li>
+                <!-- <li role="menuitem"
       class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-gray-50 hover:bg-opacity-80 hover:text-gray-900 focus:bg-gray-50 focus:bg-opacity-80 focus:text-gray-900 active:bg-gray-50 active:bg-opacity-80 active:text-gray-900">
       Menu Item 3
     </li> -->
-  </ul>
+            </ul>
             <button class="bg-white px-3 py-2 rounded-md text-red-600 font-bold" id="logout-btn">
                 Logout
             </button>
@@ -64,10 +73,11 @@
     </section>
 
     <!-- Accounts Section -->
-    <main class="p-8 grid grid-cols-1 md:h-[64dvh] md:grid-cols-3 gap-10 md:gap-4">
+    <main class="p-5  md:p-8 grid grid-cols-1 md:h-[64dvh] md:grid-cols-3 gap-10 md:gap-4">
         <div class="md:col-span-2 space-y-4">
             <!-- Account Cards -->
-            <div class="bg-white border-l-4 border-red-600 rounded-xl p-4 flex justify-between items-center shadow account-card">
+            <div
+                class="bg-white border-l-4 border-red-600 rounded-xl p-4 flex justify-between items-center shadow account-card">
                 <div class="flex items-center space-x-4">
                     <i class="fa fa-credit-card text-3xl text-red-600 icon"></i>
                     <div>
@@ -76,13 +86,14 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <p class="text-xl font-bold account-balance" >
-                        $<span id="check-acct-bl"></span>
+                    <p class="text-xl font-bold account-balance">
+                        <sup class="text-[13px] mr-[3px]">$</sup><span id="check-acct-bl"></span>
                     </p>
                     <p>Available Balance</p>
                 </div>
             </div>
-            <div class="bg-white border-l-4 border-red-600 rounded-xl p-4 flex justify-between items-center shadow account-card">
+            <div
+                class="bg-white border-l-4 border-red-600 rounded-xl p-4 flex justify-between items-center shadow account-card">
                 <div class="flex items-center space-x-4">
                     <i class="fa fa-university text-3xl text-red-600 icon"></i>
                     <div>
@@ -91,13 +102,14 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <p class="text-xl font-bold account-balance" >
-                        $<span id="plat-acct-bl"></span>
+                    <p class="text-xl font-bold account-balance">
+                        <sup class="text-[13px] mr-[3px]">$</sup><span id="plat-acct-bl"></span>
                     </p>
                     <p>Available Balance</p>
                 </div>
             </div>
-            <div class="bg-white border-l-4 border-red-600 rounded-xl p-4 flex justify-between items-center shadow account-card">
+            <div
+                class="bg-white border-l-4 border-red-600 rounded-xl p-4 flex justify-between items-center shadow account-card">
                 <div class="flex items-center space-x-4">
                     <i class="fa fa-home text-3xl text-red-600 icon"></i>
                     <div>
@@ -106,8 +118,8 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <p class="text-xl font-bold account-balance" >
-                        $<span id="mort-acct-bl"></span>
+                    <p class="text-xl font-bold account-balance">
+                        <sup class="text-[13px] mr-[3px]">$</sup><span id="mort-acct-bl"></span>
                     </p>
                     <p>Available Balance</p>
                 </div>
@@ -147,10 +159,8 @@
 
     <script src="functions.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-  type="module"
-  src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"
-></script>
+    <script type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
 
 </body>
+
 </html>

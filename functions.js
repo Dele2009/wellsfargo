@@ -3,29 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const fakeDatabase = {
         users: [
             {
-                name: 'Tunji Oladele',
-                username: 'tunji@fargo',
-                password: 'tunji100',
-                checkingAccount: '329.11',
+                name: 'Sandra Morgan',
+                username: 'sandramorgan7143',
+                password: '111111',
+                checkingAccount: '0.00',
                 platnumSavings: '376,531.31',
-                mortage: '3000.00' // In a real application, passwords should be hashed
-            },
-            {
-                name: 'Ahmed Faruq',
-                username: 'ahmed@fargo',
-                password: 'ahmed200',
-                checkingAccount: '2000.00',
-                platnumSavings: '500,629.87',
-                mortage: '10,000.00'
-            },
-            {
-                name: 'Adekunle Babalola',
-                username: 'kunle@fargo',
-                password: 'kunle300',
-                checkingAccount: '400.00',
-                platnumSavings: '50,008.96',
-                mortage: '284.89'
-            },
+                mortage: '0.00' 
+                // In a real application, passwords should be hashed
+            }
         ],
     };
 
@@ -49,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         loginForm.addEventListener('submit', function (event) {
             event.preventDefault();
-
+            
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
