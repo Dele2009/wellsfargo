@@ -35,16 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Redirect based on login status
     const CurrentPage = window.location.pathname
     if (loginUser) {
-        if (CurrentPage === '/index.html') {
+        if (CurrentPage === '/') {
             window.location.href = '/dashboard.html';
         }
     } else {
         if (CurrentPage === '/dashboard.html') {
-            window.location.href = '/index.html';
+            window.location.href = '/';
         }
     }
 
-    if (CurrentPage === '/index.html') {
+    if (CurrentPage === '/') {
         const loginForm = document.getElementById('loginForm');
 
         loginForm.addEventListener('submit', function (event) {
@@ -89,13 +89,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
             
         } else {
-            window.location.href = '/index.html';
+            window.location.href = '/';
         }
     }
 
     function logout(){
         localStorage.clear()
-        window.location.href = '/index.html'
+        window.location.href = '/'
 
     }
 });
